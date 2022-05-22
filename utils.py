@@ -11,6 +11,11 @@ class Operations(Enum):
     INFO = auto()
 
 
-def save_to_json(filename: str = 'untappd_data', data: Dict[str, Any] = None):
-    with open(f"data/{filename}.json", 'w') as f:
+def save_to_json(filename: str = 'untappd_data', data: Dict[str, Any] = None) -> None:
+    with open(f"data/{filename}.json", "w") as f:
         json.dump(data, f)
+
+
+def load_json(filename: str = '') -> Dict:
+    with open(f"data/{filename}.json", "r") as f:
+        return json.load(f)

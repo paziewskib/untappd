@@ -62,8 +62,11 @@ class Untappd:
 
 
 if __name__ == "__main__":
-    untappd_api = Untappd()
+    untappd_api = Untappd('<REPLACE_ME>')
+    print("Getting all beers...")
     all_beers = untappd_api.get_all_beers()
-    save_to_json("default", all_beers)
+    print("Done!")
+    save_to_json("<REPLACE_ME>", all_beers)
+    print("File saved!")
     # checkins = untappd_api.get_checkins()
     # print(checkins)
